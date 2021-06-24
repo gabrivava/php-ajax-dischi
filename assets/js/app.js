@@ -1,7 +1,6 @@
-/* Attraverso una chiamata ajax all’API di boolean https://flynn.boolean.careers/exercises/api/array/music avremo a disposizione una decina di dischi musicali.
-Utilizzando vue, stampiamo a schermo una card per ogni album.
-BONUS: Creare una select con tutti i generi dei dischi. In base a cosa scegliamo nella select, vedremo i corrispondenti cd.
-BONUS 2: Ordinare i dischi per anno di uscita.
+/* Creo stanza Vue
+    al caricamento eseguo una chiamata axios che recupera 10 dischi
+    tranformo la risposta da json a array associativo per passare il dato a php e stamparlo
  */
 
 /* const app = new Vue({
@@ -13,7 +12,6 @@ BONUS 2: Ordinare i dischi per anno di uscita.
         selected: null,
     },
     methods: {
-
         chekGenere(index) {
             if (this.genere === 'All') {
                 return true;
@@ -59,5 +57,4 @@ BONUS 2: Ordinare i dischi per anno di uscita.
             //console.log(this.generi);
         })
     }
-})
- */
+}) */
