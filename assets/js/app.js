@@ -3,7 +3,7 @@
     tranformo la risposta da json a array associativo per passare il dato a php e stamparlo
  */
 
-/* const app = new Vue({
+const app = new Vue({
     el: '#root',
     data: {
         albums: (''),
@@ -40,21 +40,21 @@
         }
     },
     mounted() {
-        axios.get('https://flynn.boolean.careers/exercises/api/array/music').then(risp => {
-            const album = risp.data.response;
-            //console.log(album);
+        axios.get('/api/dischi.php').then(resp => {
+            const album = resp.data;
+            console.log(album);
             this.albums = album;
 
-            /* check generi */ /*
+            /* check generi */ 
             for (let index = 0; index < this.albums.length; index++) {
                 const element = this.albums[index];
-                //console.log(element.genre);
-                //console.log(element.genre);
                 if (!this.generi.includes(element.genre)) {
                     this.generi.push(element.genre)
                 } 
             }
-            //console.log(this.generi);
+            
+        }).catch(e => {
+            console.log(e); 
         })
     }
-}) */
+})
