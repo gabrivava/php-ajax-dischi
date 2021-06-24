@@ -80,28 +80,22 @@
                 <!-- PHP -->
                 <?php 
                     foreach ($dischi as $key => $disco) : 
-                        echo '<pre>';
-
-                        var_dump($disco);
+                        //var_dump($disco);
                         ?>
                         <div class="album">
                             <img src="<?= $disco["poster"]; ?>" alt="">
+                            <h2 class="titolo"><?= $disco["title"]; ?></h2>
+                            <div class="info">
+                                <div class="autore">
+                                    <?= $disco["author"]; ?>
+                                </div>
+                                <div class="anno">
+                                    <?= $disco["year"]; ?>
+                                </div>
+                            </div>
                         </div>
                         
-
                     <?php endforeach; 
-
-                   /*  foreach ($dischi as $disco) {
-
-                        echo $disco['poster'];
-                        echo $disco['title'];
-                        echo $disco['author'];
-                        echo $disco['genre'];
-                        echo $disco['year'];
-                        var_dump(array_keys($disco));
-
-                    };
-                    var_dump($dischi); */
                 ?>
             </div>
         </main>
