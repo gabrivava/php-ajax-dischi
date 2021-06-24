@@ -78,10 +78,30 @@
                 </div> -->
                 
                 <!-- PHP -->
-                <h1>php</h1>
                 <?php 
-                    echo '<pre>';
-                    var_dump($dischi);
+                    foreach ($dischi as $key => $disco) : 
+                        echo '<pre>';
+
+                        var_dump($disco);
+                        ?>
+                        <div class="album">
+                            <img src="<?= $disco["poster"]; ?>" alt="">
+                        </div>
+                        
+
+                    <?php endforeach; 
+
+                   /*  foreach ($dischi as $disco) {
+
+                        echo $disco['poster'];
+                        echo $disco['title'];
+                        echo $disco['author'];
+                        echo $disco['genre'];
+                        echo $disco['year'];
+                        var_dump(array_keys($disco));
+
+                    };
+                    var_dump($dischi); */
                 ?>
             </div>
         </main>
@@ -90,6 +110,6 @@
     <!-- script AJAX e Vue js -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-        <script src="./main.js"></script>
+        <script src="./dist/js/app.js"></script>
 </body>
 </html>
