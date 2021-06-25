@@ -12,7 +12,7 @@ const app = new Vue({
         selected: null,
     },
     methods: {
-        chekGenere(index) {
+        /* chekGenere(index) {
             if (this.genere === 'All') {
                 return true;
             } else if (this.albums[index].genre.includes(this.genere)) {
@@ -37,21 +37,21 @@ const app = new Vue({
 
             }
 
-        }
+        } */
     },
     mounted() {
-        axios.get('/api/dischi.php').then(resp => {
+        axios.get('../../php-ajax-dischi/php-ajax-dischi/api/dischi.php').then(resp => {
             const album = resp.data;
             console.log(album);
             this.albums = album;
 
             /* check generi */ 
-            for (let index = 0; index < this.albums.length; index++) {
+            /* for (let index = 0; index < this.albums.length; index++) {
                 const element = this.albums[index];
                 if (!this.generi.includes(element.genre)) {
                     this.generi.push(element.genre)
                 } 
-            }
+            } */
             
         }).catch(e => {
             console.log(e); 

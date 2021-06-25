@@ -49,7 +49,7 @@
         <main>
             <div class="albums">
 
-                <div v-for="(album, index) in albums" class="album" v-if="chekGenere(index)">
+                <div v-for="(album, index) in albums" class="album">
                     <img :src="album.poster" alt="">
                     <h2 class="titolo">{{album.title}}</h2>
                     <div class="info">
@@ -69,8 +69,8 @@
         
     </div>
     <!-- script AJAX e Vue js -->
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-        <script src="./dist/js/app.js"></script>
+        <script src="./assets/js/app.js"></script>
 </body>
 </html>
